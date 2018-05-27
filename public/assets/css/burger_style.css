@@ -1,0 +1,23 @@
+#burger-img {
+    height: 200px;
+    width: auto;
+ }
+ 
+ .burger-row {
+    height: 40px;
+    line-height: 20px;
+ }
+ 
+ .burger-text {
+    width: 70%;
+    vertical-align: middle;
+    display: inline-block;
+    text-overflow: clip;
+ }
+ 
+ .burger-row button {
+    height: 30px;
+ }
+ #burger-col, #devoured-col {
+    margin-left: 25px;
+ }
