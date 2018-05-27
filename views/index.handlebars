@@ -1,6 +1,6 @@
 div class="container">
    <div class="jumbo-tron text-center mx-auto my-3">
-      <h1>Devour a Burger</h1>
+      <h1>Munch-a Burger!</h1>
       <img id="burger-img" src="assets/img/burger.png" alt="Burger Image">
    </div>
    <div class="row">
@@ -12,7 +12,7 @@ div class="container">
             {{#unless this.devoured}}
                   <div class="row burger-row">
                         <span class="burger-text">{{this.name}}</span>
-                        <button data-id="{{this.id}}" class="btn btn-secondary btn-sm devour ml-auto">Devour It</button>
+                        <button data-id="{{this.id}}" class="btn btn-secondary btn-sm devour ml-auto">Devour it!</button>
                         <br>
                   </div>
             {{/unless}}
@@ -20,7 +20,7 @@ div class="container">
       </div>
       
       <div id="devoured-col" class="col-4 my-2">
-         <h3>Your Devoured Burgers</h3>
+         <h3>Your Munched Burgers</h3>
             {{#each burger}}
             {{#if this.devoured}}
                   {{this.id}}) {{this.name}}
