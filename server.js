@@ -1,3 +1,5 @@
+// 
+
 var express = require("express");
 var bodyParser = require("body-parser");
 
@@ -5,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
+// Serve static content for the app from "public" directory within the main burger" folder.
 app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
@@ -21,7 +23,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgersController.js");
+var routes = require("./controllers/burgers_controller.js");
 console.log("routes",routes);
 
 app.use(routes);
