@@ -4,3 +4,4 @@ INSERT INTO burgers (burger_name, devoured) VALUES ('Hippie Veggie Burger', fals
 INSERT INTO burgers (burger_name, devoured) VALUES ('Chili Cheese Burger', false);
 INSERT INTO burgers (burger_name, devoured) VALUES ('Chicken Bacon Burger', false);
 INSERT INTO burgers (burger_name, devoured) VALUES ('Beef Double Cheese Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Mongo Triple Heart Attack Burger', false);

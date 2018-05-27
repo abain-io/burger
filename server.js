@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
-// Serve static content for the app from "public" directory within the main burger" folder.
+// Serve static content for the app from "public" directory within the main burger" directory.
 app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
