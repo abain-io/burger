@@ -21,7 +21,7 @@ var burger = {
 };
 
 // Test 
-// burger.create(["name","devoured"],["huge cheese burger",true],function(res){
+// burger.create(["name","devoured"],["Hippie Veggie Burger",true],function(res){
 //   console.log("responds",res)
 // });
 

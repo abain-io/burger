@@ -23,5 +23,4 @@ module.exports = connection;
 // Export routes for server.js to use.
 module.exports = router;
 
-// exports for server.js
-module.exports = router;
+
