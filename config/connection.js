@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "root",
-    database: "burger_db"
+    database: "burgers_db"
 });
 
 connection.connect(function (err) {
@@ -20,7 +20,9 @@ connection.connect(function (err) {
 // exports for ORM
 module.exports = connection;
 
-// Export routes for server.js to use.
-module.exports = router;
+// // Export routes for server.js to use.
+// module.exports = router;
+
+
 
 
