@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../public/assets/css/burger_style.css" type="text/css" />
     <title>Enjoy Your Burgers!</title>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="../controllers/burger_controller.js"></script>
@@ -32,7 +32,7 @@
         </div>
 
         <div id="devoured-col" class="col-4 my-2">
-            <h3>Your Munched Burgers</h3>
+            <h3>Munched Burgers</h3>
             {{#each burger}} {{#if this.devoured}} {{this.id}}) {{this.name}}
             <br> {{/if}} {{/each}}
         </div>
