@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <title>Enjoy Your Burgers!</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../controllers/burger_controller.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+    <div class="jumbo-tron text-center mx-auto my-3">
+        <h1>Munch-a-Burger!</h1>
+        <img id="burger-img" src="assets/img/burger.png" alt="Burger Image">
+    </div>
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div id="burger-col" class="col-4 my-2">
+            <h3>Your Burger List</h3>
+            {{#each burger}} {{#unless this.devoured}}
+            <div class="row burger-row">
+                <span class="burger-text">{{this.name}}</span>
+                <button data-id="{{this.id}}" class="btn btn-secondary btn-sm devour ml-auto">Munch it!</button>
+                <br>
+            </div>
+            {{/unless}} {{/each}}
+        </div>
+
+        <div id="devoured-col" class="col-4 my-2">
+            <h3>Your Munched Burgers</h3>
+            {{#each burger}} {{#if this.devoured}} {{this.id}}) {{this.name}}
+            <br> {{/if}} {{/each}}
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+    <div class="row mx-auto text-center mt-2">
+        <div class="col-12">
+            <h2>Add a Burger</h2>
+        </div>
+        <div class="row mx-auto">
+            <br>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="burger">Burger name:</label>
+                    <input type="text" id="burger-name" name="name">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
