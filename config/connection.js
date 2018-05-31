@@ -1,30 +1,48 @@
 // Set up connection to mySQL
-var mysql = require('mysql');
-var connection;
+// var mysql = require('mysql');
+// var connection;
 
-if (process.env.JAWSDB_URL) {
-connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else 
-{
-    connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "burgers_db"
+// if (process.env.JAWSDB_URL) {
+// connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else 
+// {
+//     connection = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "root",
+//     database: "burgers_db"
+// });
+
+// connection.connect(function (err) {
+//     if (err) {
+//         console.error("error connecting: " + err.stack);
+//         return;
+//     }
+//     console.log("connected as id " + connection.threadId);
+// });
+
+// }
+
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: process.env.db_host || "localhost",
+    user: process.env.db_user || "root",
+    password: process.env.db_pw || "",
+    database: process.env.db || "burgers_db"
 });
 
 connection.connect(function (err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
-    console.log("connected as id " + connection.threadId);
+	if (err) {
+		console.error('error connecting: ' + err.stack);
+		return;
+	}
+	console.log('connected as id ' + connection.threadId);
 });
 
-}
-
-// exports for ORM
 module.exports = connection;
+
+// // exports for ORM
+// module.exports = connection;
 
 // // Export routes for server.js to use.
 // module.exports = router;
